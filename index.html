@@ -39,7 +39,7 @@
         <ul>
           <li ng-repeat="item in filtered = (restaurants | filter:query)">
             <strong>Name:</strong> {{item.name}}<br>
-            <strong>Type of food:</strong> <br><em><span ng-repeat="types in item.type">{{types}}<br></span></em>
+            <em><span ng-repeat="types in item.type">{{types}}<br></span></em>
             <span ng-click="editing = true" ng-hide="editing">
               <strong>Price point:</strong> {{item.price}}
             </span>
