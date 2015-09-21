@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="container" ng-controller="RestaurantsCtrl">
-    <div class="row">
+    <div class="row text-center">
       <div class="col-md-12">
         <h4>Search Restaurants</h4>
         <form class="form-inline" role="form">
@@ -26,8 +26,9 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
-        <h2>Restaurant List</h2>
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <h2 class="text-center">Restaurant List</h2>
         <ul>
           <li ng-repeat="item in restaurants | filter:query">
             <strong>{{item.name}}</strong>,
@@ -50,14 +51,15 @@
         </li>
       </ul>
     </div>
-    <div class="col-md-12">
-      <h2>New Restaurant</h2>
+    <div class="col-md-4">
+      <h2 class="text-center">New Restaurant</h2>
       <form ng-submit="addRestaurant()" class="form-inline" role="form">
         <div class="form-group">
+          <label for="restaurantName">Name</label>
           <input type="text" ng-model="restaurantName" class="form-control" placeholder="Enter name">
-        </div>
+        </div><br><br>
         <div class="form-group">
-          <!-- <input type="radio" name="American" value="American" ng-model="restaurantType" checked> -->
+          <label for="restaurantType">Type of food</label>
           <select ng-model="restaurantType" multiple class="form-control">
             <option value="American">American</option>
             <option value="Italian">Italian</option>
@@ -65,9 +67,9 @@
             <option value="Chinese">Chinese</option>
             <option value="French">French</option>
           </select>
-
-        </div>
+        </div><br><br>
         <div class="form-group">
+          <label for="restaurantPrice">Price Point</label>
           <select ng-model="restaurantPrice" class="form-control">
             <option value="$">$</option>
             <option value="$$">$$</option>
@@ -78,6 +80,7 @@
         <button type="submit" class="btn btn-info btn-sm">Add</button>
       </form>
     </div>
+    <div class="col-md-2"></div>
   </div>
 </div>
 </body>
