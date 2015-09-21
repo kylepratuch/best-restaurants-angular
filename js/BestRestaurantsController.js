@@ -3,7 +3,7 @@ bestRestaurants.controller('RestaurantsCtrl', function RestaurantsCtrl($scope) {
     { name: "Little Big Burger", type: "Burgers", price: "$" },
     { name: "Lardo", type: "Sandwiches", price: "$$" }
   ];
-  
+
   $scope.addRestaurant = function() {
     $scope.restaurants.push({ name: $scope.restaurantName,
       type: $scope.restaurantType,
@@ -16,6 +16,6 @@ bestRestaurants.controller('RestaurantsCtrl', function RestaurantsCtrl($scope) {
 
   $scope.deleteRestaurant = function(restaurant) {
     var index = $scope.restaurants.indexOf(restaurant);
-    $scope.students.splice(index, 1);
+    $scope.restaurants.splice(index, 1);
   };
 });
