@@ -6,7 +6,7 @@ bestRestaurants.controller('RestaurantsCtrl', function RestaurantsCtrl($scope) {
 
   $scope.addRestaurant = function() {
     $scope.restaurants.push({ name: $scope.restaurantName,
-      type: [$scope.restaurantType],
+      type: $scope.restaurantType,
       price: $scope.restaurantPrice });
 
       $scope.restaurantName = null;
