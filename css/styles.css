@@ -1,3 +1,16 @@
-#filter {
-  display: none;
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/*.container {
+  margin-top: 50px;
+}*/
+
+h1, h2, h3, h4 {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
 }
